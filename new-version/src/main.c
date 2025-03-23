@@ -1,15 +1,14 @@
 #include "cub3d.h"
 
 
-void f()
-{
-	system("lsof -c cub3d");
+// void f()
+// {
+// 	system("lsof -c cub3d");
 
-}
+// }
 
 int main(int argc, char **argv)
 {
-	atexit(f);
 	if (argc != 2)
 		ft_error("Usage: ./cub3d <map.cub>");
 

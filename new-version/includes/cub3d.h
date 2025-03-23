@@ -56,22 +56,6 @@ typedef struct s_data
 	mlx_texture_t	*ea_tex;
 }	t_data;
 
-<<<<<<< HEAD
-typedef struct s_config {
-	int width;
-	int height;
-	char *no_texture; // North texture path
-	int flag_player;
-	char *so_texture; // South texture path
-	char *we_texture; // West texture path 
-	char *ea_texture; // East texture path
-	uint32_t floor_color; // RGBA packed as 0xRRGGBBFF
-	uint32_t ceil_color;  // RGBA packed as 0xRRGGBBFF
-	char **map; // 2D map array
-	int map_width;
-	int map_height;
-} t_config;
-
 typedef struct s_vari
 {
 	char **map1;
@@ -92,16 +76,6 @@ typedef struct s_node
 	struct s_node	*next;
 }	t_node;
 
-typedef struct s_data {
-	mlx_t *mlx;
-	mlx_image_t *img;
-	t_player player;
-	t_config config;
-	mlx_texture_t *no_tex; // North texture
-	mlx_texture_t *so_tex; // South texture
-	mlx_texture_t *we_tex; // West texture
-	mlx_texture_t *ea_tex; // East texture
-} t_data;
 
 typedef struct s_parce
 {
@@ -111,7 +85,7 @@ typedef struct s_parce
 	int		col;
 	char	*line;
 } t_parce;
-=======
+
 typedef struct s_ray_step
 {
 	int	step_x;
@@ -132,7 +106,6 @@ typedef struct s_ray
 	double	dist;
 	int	hit;
 }	t_ray;
->>>>>>> 87eaaafcb41192bac92b031bfea14394231652e4
 
 
 
@@ -141,23 +114,13 @@ void	*smart_malloc(size_t size);
 void	smart_free(void);
 t_list	*ft_lstnew(char *content);
 void	ft_lstadd_back(t_list **lst, t_list *new);
-<<<<<<< HEAD
-void    ft_render(void *param);
-void    ft_hook(void *param);
-double  cast_ray(t_data *data, double ray_angle, int *side, double *wall_x);
 void	parse_cub_file(const char *filename, t_data *data, int error_flag, t_list *list);
 void    ft_error(const char *str);
 void    load_textures(t_data *data);
 void    free_textures(t_data *data);
-=======
 void	ft_render(void *param);
 void	ft_hook(void *param);
 double	cast_ray(t_data *data, t_ray *ray);
-void	parse_cub_file(const char *filename, t_data *data);
-void	ft_error(const char *str);
-void	load_textures(t_data *data);
-void	free_textures(t_data *data);
->>>>>>> 87eaaafcb41192bac92b031bfea14394231652e4
 double	to_radian(int value);
 void	draw_ceil_and_floor(t_data *data);
 void	move_forward(t_data *data, double move_speed);

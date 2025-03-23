@@ -2,8 +2,8 @@
 NAME = cub3d
 
 # Compiler and Flags
-CC = cc
-CFLAGS = -Wall -Wextra -Werror #-fsanitize=address,leak -g3
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -g
 # Directories
 SRC_DIR = src
 SRC_DIR_LIBFT = src/libft
@@ -38,16 +38,11 @@ SRCS = $(SRC_DIR)/main.c \
        $(SRC_DIR)/move.c \
        $(SRC_DIR)/parse.c \
        $(SRC_DIR)/utils.c \
-       $(SRC_DIR)/garbage_collector.c \
+       $(SRC_DIR)/garbage_collector.c
 
 # Object Files
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o) $(LIBFT_SRCS:$(SRC_DIR_LIBFT)/%.c=$(OBJ_DIR)/%.o) $(GNL_SRCS:$(SRC_DIR_GNL)/%.c=$(OBJ_DIR)/%.o)
 
-<<<<<<< HEAD
-# Header Files
-# HEADERS = $(INC_DIR)/cub3d.h
-=======
->>>>>>> 87eaaafcb41192bac92b031bfea14394231652e4
 
 # MLX42 Library
 MLX_LIB = $(MLX_DIR)/build/libmlx42.a

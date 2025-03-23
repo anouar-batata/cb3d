@@ -1,0 +1,270 @@
+==229315== Memcheck, a memory error detector
+==229315== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==229315== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==229315== Command: ./cub3d assets/maps/map.cub
+==229315== Parent PID: 225158
+==229315== 
+==229315== Conditional jump or move depends on uninitialised value(s)
+==229315==    at 0x10CE24: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315==  Uninitialised value was created by a heap allocation
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x10D7CC: smart_malloc (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10CD59: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315== 
+==229315== Conditional jump or move depends on uninitialised value(s)
+==229315==    at 0x10D15E: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315==  Uninitialised value was created by a heap allocation
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x10D7CC: smart_malloc (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10CD59: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315== 
+==229315== Conditional jump or move depends on uninitialised value(s)
+==229315==    at 0x10CE9A: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315==  Uninitialised value was created by a heap allocation
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x10D7CC: smart_malloc (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10CD59: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315== 
+==229315== Conditional jump or move depends on uninitialised value(s)
+==229315==    at 0x10CF10: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315==  Uninitialised value was created by a heap allocation
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x10D7CC: smart_malloc (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10CD59: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315== 
+==229315== Conditional jump or move depends on uninitialised value(s)
+==229315==    at 0x10CF86: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315==  Uninitialised value was created by a heap allocation
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x10D7CC: smart_malloc (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10CD59: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315== 
+==229315== Conditional jump or move depends on uninitialised value(s)
+==229315==    at 0x10CFFC: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315==  Uninitialised value was created by a heap allocation
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x10D7CC: smart_malloc (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10CD59: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315== 
+==229315== Conditional jump or move depends on uninitialised value(s)
+==229315==    at 0x10D07B: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315==  Uninitialised value was created by a heap allocation
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x10D7CC: smart_malloc (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10CD59: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315== 
+==229315== Conditional jump or move depends on uninitialised value(s)
+==229315==    at 0x10CDFE: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315==  Uninitialised value was created by a heap allocation
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x10D7CC: smart_malloc (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10CD59: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315== 
+==229315== Conditional jump or move depends on uninitialised value(s)
+==229315==    at 0x10D0F7: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315==  Uninitialised value was created by a heap allocation
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x10D7CC: smart_malloc (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10CD59: parse_cub_file (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A914: main (in /root/home/c/new-version/cub3d)
+==229315== 
+==229315== Invalid read of size 8
+==229315==    at 0x40286A8: strncmp (strcmp.S:172)
+==229315==    by 0x400668D: is_dst (dl-load.c:216)
+==229315==    by 0x400810E: _dl_dst_count (dl-load.c:253)
+==229315==    by 0x400810E: expand_dynamic_string_token (dl-load.c:395)
+==229315==    by 0x40082B7: fillin_rpath.isra.0 (dl-load.c:483)
+==229315==    by 0x4008602: decompose_rpath (dl-load.c:654)
+==229315==    by 0x400ABF5: cache_rpath (dl-load.c:696)
+==229315==    by 0x400ABF5: cache_rpath (dl-load.c:677)
+==229315==    by 0x400ABF5: _dl_map_object (dl-load.c:2165)
+==229315==    by 0x4003494: openaux (dl-deps.c:64)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x4003C7B: _dl_map_object_deps (dl-deps.c:248)
+==229315==    by 0x400EA0E: dl_open_worker_begin (dl-open.c:592)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400DF99: dl_open_worker (dl-open.c:782)
+==229315==  Address 0x556f399 is 9 bytes inside a block of size 15 alloc'd
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x40271DF: malloc (rtld-malloc.h:56)
+==229315==    by 0x40271DF: strdup (strdup.c:42)
+==229315==    by 0x4008594: decompose_rpath (dl-load.c:629)
+==229315==    by 0x400ABF5: cache_rpath (dl-load.c:696)
+==229315==    by 0x400ABF5: cache_rpath (dl-load.c:677)
+==229315==    by 0x400ABF5: _dl_map_object (dl-load.c:2165)
+==229315==    by 0x4003494: openaux (dl-deps.c:64)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x4003C7B: _dl_map_object_deps (dl-deps.c:248)
+==229315==    by 0x400EA0E: dl_open_worker_begin (dl-open.c:592)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400DF99: dl_open_worker (dl-open.c:782)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400E34D: _dl_open (dl-open.c:883)
+==229315== 
+==229315== Invalid read of size 8
+==229315==    at 0x40286A8: strncmp (strcmp.S:172)
+==229315==    by 0x400668D: is_dst (dl-load.c:216)
+==229315==    by 0x4007F79: _dl_dst_substitute (dl-load.c:295)
+==229315==    by 0x40082B7: fillin_rpath.isra.0 (dl-load.c:483)
+==229315==    by 0x4008602: decompose_rpath (dl-load.c:654)
+==229315==    by 0x400ABF5: cache_rpath (dl-load.c:696)
+==229315==    by 0x400ABF5: cache_rpath (dl-load.c:677)
+==229315==    by 0x400ABF5: _dl_map_object (dl-load.c:2165)
+==229315==    by 0x4003494: openaux (dl-deps.c:64)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x4003C7B: _dl_map_object_deps (dl-deps.c:248)
+==229315==    by 0x400EA0E: dl_open_worker_begin (dl-open.c:592)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400DF99: dl_open_worker (dl-open.c:782)
+==229315==  Address 0x556f399 is 9 bytes inside a block of size 15 alloc'd
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x40271DF: malloc (rtld-malloc.h:56)
+==229315==    by 0x40271DF: strdup (strdup.c:42)
+==229315==    by 0x4008594: decompose_rpath (dl-load.c:629)
+==229315==    by 0x400ABF5: cache_rpath (dl-load.c:696)
+==229315==    by 0x400ABF5: cache_rpath (dl-load.c:677)
+==229315==    by 0x400ABF5: _dl_map_object (dl-load.c:2165)
+==229315==    by 0x4003494: openaux (dl-deps.c:64)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x4003C7B: _dl_map_object_deps (dl-deps.c:248)
+==229315==    by 0x400EA0E: dl_open_worker_begin (dl-open.c:592)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400DF99: dl_open_worker (dl-open.c:782)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400E34D: _dl_open (dl-open.c:883)
+==229315== 
+==229315== 
+==229315== Process terminating with default action of signal 2 (SIGINT)
+==229315==    at 0x4A49F0E: futex_wake (futex-internal.h:209)
+==229315==    by 0x4A49F0E: __pthread_once_slow (pthread_once.c:127)
+==229315==    by 0x9C07B0F: llvm::initializeAssumptionCacheTrackerPass(llvm::PassRegistry&) (in /usr/lib/x86_64-linux-gnu/libLLVM-15.so.1)
+==229315==    by 0x9C10FFB: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-15.so.1)
+==229315==    by 0x4A49EE7: __pthread_once_slow (pthread_once.c:116)
+==229315==    by 0x9C10F7F: llvm::initializeBasicAAWrapperPassPass(llvm::PassRegistry&) (in /usr/lib/x86_64-linux-gnu/libLLVM-15.so.1)
+==229315==    by 0x9BF824C: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-15.so.1)
+==229315==    by 0x4A49EE7: __pthread_once_slow (pthread_once.c:116)
+==229315==    by 0x9BF81CF: llvm::initializeAAResultsWrapperPassPass(llvm::PassRegistry&) (in /usr/lib/x86_64-linux-gnu/libLLVM-15.so.1)
+==229315==    by 0xB7996FB: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-15.so.1)
+==229315==    by 0x4A49EE7: __pthread_once_slow (pthread_once.c:116)
+==229315==    by 0xB79968F: llvm::initializeScopInfoRegionPassPass(llvm::PassRegistry&) (in /usr/lib/x86_64-linux-gnu/libLLVM-15.so.1)
+==229315==    by 0xB7687CB: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-15.so.1)
+==229315== 
+==229315== HEAP SUMMARY:
+==229315==     in use at exit: 1,738,448 bytes in 5,107 blocks
+==229315==   total heap usage: 17,712 allocs, 12,605 frees, 4,032,041 bytes allocated
+==229315== 
+==229315== 0 bytes in 1 blocks are definitely lost in loss record 3 of 2,600
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x4005A22: malloc (rtld-malloc.h:56)
+==229315==    by 0x4005A22: _dl_find_object_update (dl-find_object.c:791)
+==229315==    by 0x400ECCF: dl_open_worker_begin (dl-open.c:735)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400DF99: dl_open_worker (dl-open.c:782)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400E34D: _dl_open (dl-open.c:883)
+==229315==    by 0x4A4063B: dlopen_doit (dlopen.c:56)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x4B24B62: _dl_catch_error (dl-error-skeleton.c:227)
+==229315==    by 0x4A4012D: _dlerror_run (dlerror.c:138)
+==229315==    by 0x4A406C7: dlopen_implementation (dlopen.c:71)
+==229315==    by 0x4A406C7: dlopen@@GLIBC_2.34 (dlopen.c:81)
+==229315== 
+==229315== 80 bytes in 1 blocks are possibly lost in loss record 2,364 of 2,600
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x530AF16: ??? (in /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0)
+==229315==    by 0x530B5DE: __glDispatchInit (in /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0)
+==229315==    by 0x538574E: ??? (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+==229315==    by 0x400647D: call_init.part.0 (dl-init.c:70)
+==229315==    by 0x4006567: call_init (dl-init.c:33)
+==229315==    by 0x4006567: _dl_init (dl-init.c:117)
+==229315==    by 0x4B24AF4: _dl_catch_exception (dl-error-skeleton.c:182)
+==229315==    by 0x400DFF5: dl_open_worker (dl-open.c:808)
+==229315==    by 0x400DFF5: dl_open_worker (dl-open.c:771)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400E34D: _dl_open (dl-open.c:883)
+==229315==    by 0x4A4063B: dlopen_doit (dlopen.c:56)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315== 
+==229315== 80 bytes in 1 blocks are possibly lost in loss record 2,365 of 2,600
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x530AF16: ??? (in /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0)
+==229315==    by 0x530B7FF: __glDispatchRegisterStubCallbacks (in /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0)
+==229315==    by 0x5286218: ??? (in /usr/lib/x86_64-linux-gnu/libGL.so.1.7.0)
+==229315==    by 0x400647D: call_init.part.0 (dl-init.c:70)
+==229315==    by 0x4006567: call_init (dl-init.c:33)
+==229315==    by 0x4006567: _dl_init (dl-init.c:117)
+==229315==    by 0x4B24AF4: _dl_catch_exception (dl-error-skeleton.c:182)
+==229315==    by 0x400DFF5: dl_open_worker (dl-open.c:808)
+==229315==    by 0x400DFF5: dl_open_worker (dl-open.c:771)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400E34D: _dl_open (dl-open.c:883)
+==229315==    by 0x4A4063B: dlopen_doit (dlopen.c:56)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315== 
+==229315== 128 bytes in 1 blocks are possibly lost in loss record 2,410 of 2,600
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x5404DD4: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+==229315==    by 0x54046F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+==229315==    by 0x53EC0B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+==229315==    by 0x53E8ADB: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+==229315==    by 0x4873404: glfwCreateWindow (in /usr/lib/x86_64-linux-gnu/libglfw.so.3.3)
+==229315==    by 0x10F9C3: mlx_init (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A92D: main (in /root/home/c/new-version/cub3d)
+==229315== 
+==229315== 128 bytes in 1 blocks are possibly lost in loss record 2,411 of 2,600
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x5404DD4: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+==229315==    by 0x5404E4A: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+==229315==    by 0x5404751: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+==229315==    by 0x53EC0B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+==229315==    by 0x53E8ADB: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+==229315==    by 0x4873404: glfwCreateWindow (in /usr/lib/x86_64-linux-gnu/libglfw.so.3.3)
+==229315==    by 0x10F9C3: mlx_init (in /root/home/c/new-version/cub3d)
+==229315==    by 0x10A92D: main (in /root/home/c/new-version/cub3d)
+==229315== 
+==229315== 4,608 bytes in 2 blocks are possibly lost in loss record 2,579 of 2,600
+==229315==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==229315==    by 0x4005D97: malloc (rtld-malloc.h:56)
+==229315==    by 0x4005D97: _dlfo_mappings_segment_allocate (dl-find_object.c:217)
+==229315==    by 0x4005D97: _dl_find_object_update_1 (dl-find_object.c:671)
+==229315==    by 0x4005D97: _dl_find_object_update (dl-find_object.c:804)
+==229315==    by 0x400ECCF: dl_open_worker_begin (dl-open.c:735)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400DF99: dl_open_worker (dl-open.c:782)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x400E34D: _dl_open (dl-open.c:883)
+==229315==    by 0x4A4063B: dlopen_doit (dlopen.c:56)
+==229315==    by 0x4B24A97: _dl_catch_exception (dl-error-skeleton.c:208)
+==229315==    by 0x4B24B62: _dl_catch_error (dl-error-skeleton.c:227)
+==229315==    by 0x4A4012D: _dlerror_run (dlerror.c:138)
+==229315==    by 0x4A406C7: dlopen_implementation (dlopen.c:71)
+==229315==    by 0x4A406C7: dlopen@@GLIBC_2.34 (dlopen.c:81)
+==229315== 
+==229315== LEAK SUMMARY:
+==229315==    definitely lost: 0 bytes in 1 blocks
+==229315==    indirectly lost: 0 bytes in 0 blocks
+==229315==      possibly lost: 5,024 bytes in 6 blocks
+==229315==    still reachable: 1,733,424 bytes in 5,100 blocks
+==229315==         suppressed: 0 bytes in 0 blocks
+==229315== Reachable blocks (those to which a pointer was found) are not shown.
+==229315== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==229315== 
+==229315== For lists of detected and suppressed errors, rerun with: -s
+==229315== ERROR SUMMARY: 44 errors from 17 contexts (suppressed: 0 from 0)

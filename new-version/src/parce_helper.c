@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parce_helper.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alouriga <alouriga@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: alouriga <alouriga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 09:04:55 by alouriga          #+#    #+#             */
-/*   Updated: 2025/03/24 09:17:18 by alouriga         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:03:13 by alouriga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ void	unit_variables(t_config **config, t_vari **var, t_data *data)
 	(*var)->line_count = 0;
 	(*var)->map_line_start = 0;
 	(*var)->map_started = 0;
+	(*var)->map1 = NULL;
 }
 
 int	parce_name_file(const char *str, int index)

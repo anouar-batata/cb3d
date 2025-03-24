@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alouriga <alouriga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 10:34:00 by bzinedda          #+#    #+#             */
-/*   Updated: 2025/03/24 12:21:43 by bzinedda         ###   ########.fr       */
+/*   Updated: 2025/03/24 23:30:41 by alouriga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static void	draw_wall_column(t_data *data, t_ray ray, int x, double wall_height)
 			if ((ray.side == 0 && ray.dx < 0) || (ray.side == 1 && ray.dy > 0))
 				var.tex_x = texture->width - var.tex_x - 1;
 			get_color(&var, texture);
-            mlx_put_pixel(data->img, x, var.y, var.corrected_color);
+			mlx_put_pixel(data->img, x, var.y, var.corrected_color);
 		}
 		var.y++;
 	}

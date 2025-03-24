@@ -1,9 +1,9 @@
 # Project Name
-NAME = cub3d
+NAME = cub3D
 
 # Compiler and Flags
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 # Directories
 SRC_DIR = src
 SRC_DIR_LIBFT = src/libft
@@ -38,7 +38,12 @@ SRCS = $(SRC_DIR)/main.c \
        $(SRC_DIR)/move.c \
        $(SRC_DIR)/parse.c \
        $(SRC_DIR)/utils.c \
-       $(SRC_DIR)/garbage_collector.c
+       $(SRC_DIR)/garbage_collector.c \
+       $(SRC_DIR)/utils.1.c \
+       $(SRC_DIR)/checker_parce.c \
+       $(SRC_DIR)/check_parce_2.c \
+       $(SRC_DIR)/parce_helper.c \
+       $(SRC_DIR)/parce_helper_2.c \
 
 # Object Files
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o) $(LIBFT_SRCS:$(SRC_DIR_LIBFT)/%.c=$(OBJ_DIR)/%.o) $(GNL_SRCS:$(SRC_DIR_GNL)/%.c=$(OBJ_DIR)/%.o)

@@ -8,31 +8,33 @@ void ft_error(const char *str)
 	// fprintf(stderr, "%s\n", mlx_strerror(mlx_errno));
 	exit(1);
 }
-void ft_error_2(const char *str, int fd)
-{
-	close(fd);
-	smart_free();
-	printf("Error\n");
-	printf("%s", str);
-	// fprintf(stderr, "%s\n", mlx_strerror(mlx_errno));
-	exit(1);
-}
 
 void load_textures(t_data *data)
 {
 	data->no_tex = mlx_load_png(data->config.no_texture);
-	data->so_tex = mlx_load_png(data->config.so_texture);
-	data->we_tex = mlx_load_png(data->config.we_texture);
-	data->ea_tex = mlx_load_png(data->config.ea_texture);
-
 	if (!data->no_tex)
 		ft_error("Failed to load north texture");
+	data->so_tex = mlx_load_png(data->config.so_texture); // Free this
 	if (!data->so_tex)
+	{
+		mlx_load_png(data->config.no_texture);
 		ft_error("Failed to load south texture");
+	}
+	data->we_tex = mlx_load_png(data->config.we_texture);
 	if (!data->we_tex)
+	{
+		mlx_delete_texture(data->no_tex);
+		mlx_delete_texture(data->so_tex);
 		ft_error("Failed to load west texture");
-	if (!data->ea_tex)
+	}
+	data->ea_tex = mlx_load_png(data->config.ea_texture);
+	if(!data->ea_tex)
+	{
+		mlx_delete_texture(data->no_tex);
+		mlx_delete_texture(data->so_tex);
+		mlx_delete_texture(data->we_tex);
 		ft_error("Failed to load east texture");
+	}
 }
 
 void free_config(t_data *data) {

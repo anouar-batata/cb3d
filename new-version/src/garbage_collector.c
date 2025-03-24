@@ -6,24 +6,11 @@
 /*   By: alouriga <alouriga@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 22:35:23 by alouriga          #+#    #+#             */
-/*   Updated: 2025/03/23 16:09:44 by alouriga         ###   ########.fr       */
+/*   Updated: 2025/03/24 09:24:30 by alouriga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
-
-
-t_node	*ft_lstnew8(void *ptr_to_store)
-{
-	t_node	*new_node;
-
-	new_node = (t_node *)malloc(sizeof(t_node));
-	if (!new_node)
-		exit (1);
-	new_node->ptr = ptr_to_store;
-	new_node->next = NULL;
-	return (new_node);
-}
 
 void	ft_lstadd_back8(t_node **lst, t_node *new)
 {
@@ -45,13 +32,14 @@ void	ft_lstadd_back8(t_node **lst, t_node *new)
 void	*globalizer_head(int mode, void *ptr)
 {
 	static t_node	*rl_lst;
+
 	if (mode == 1)
 	{
 		rl_lst = ptr;
 		return (NULL);
 	}
 	else
-			return (rl_lst);
+		return (rl_lst);
 }
 
 int	store_smart_mallocs(void *ptr_to_add)
@@ -100,5 +88,4 @@ void	smart_free(void)
 		current = next;
 	}
 	globalizer_head(1, NULL);
-	
 }

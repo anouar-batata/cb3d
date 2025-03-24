@@ -6,7 +6,7 @@
 /*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 10:34:34 by bzinedda          #+#    #+#             */
-/*   Updated: 2025/03/24 11:58:11 by bzinedda         ###   ########.fr       */
+/*   Updated: 2025/03/24 12:22:05 by bzinedda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,21 @@ void	draw_ceil_and_floor(t_data *data)
 		}
 		y++;
 	}
+}
+
+void	get_color(t_data_tex *var, mlx_texture_t *texture)
+{
+	var->color = ((uint32_t *)texture->pixels)[var->tex_y * texture->width + var->tex_x];
+    var->bytes = (uint8_t *)&var->color;
+	var->corrected_color = (var->bytes[0] << 24) | (var->bytes[1] << 16) | (var->bytes[2] << 8) | var->bytes[3];
+}
+
+void	turn_right(t_data *data, double rot_speed)
+{
+	data->player.angle += rot_speed;
+}
+
+void	turn_left(t_data *data, double rot_speed)
+{
+	data->player.angle -= rot_speed;
 }

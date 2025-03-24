@@ -6,7 +6,7 @@
 /*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 10:34:58 by bzinedda          #+#    #+#             */
-/*   Updated: 2025/03/24 12:04:20 by bzinedda         ###   ########.fr       */
+/*   Updated: 2025/03/24 12:17:59 by bzinedda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,6 @@
 void	f(void)
 {
 	system("lsof -c cub3D; leaks cub3D | grep leaks");
-}
-
-void	turn_right(t_data *data, double rot_speed)
-{
-	data->player.angle += rot_speed;
-}
-
-void	turn_left(t_data *data, double rot_speed)
-{
-	data->player.angle -= rot_speed;
 }
 
 int	main(int argc, char **argv)

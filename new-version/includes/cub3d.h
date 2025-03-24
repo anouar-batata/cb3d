@@ -108,12 +108,16 @@ typedef struct s_ray
 
 typedef struct s_data_tex
 {
-	int y;
-	int	tex_x;
-	int	tex_y;
+	int			y;
+	int			tex_x;
+	int			tex_y;
+	uint32_t	color;
+	uint8_t		*bytes;
+	uint32_t	corrected_color;
 }	t_data_tex;
 
 int	check_collision(t_data *data, int map_x, int map_y);
+void	get_color(t_data_tex *var, mlx_texture_t *texture);
 void	free_config(t_data *data);
 double	to_radian(int value);
 t_node	*ft_lstnew8(void *ptr_to_store);

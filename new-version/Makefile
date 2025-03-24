@@ -1,8 +1,7 @@
-# Project Name
 NAME = cub3D
 
 # Compiler and Flags
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 # Directories
 SRC_DIR = src
@@ -40,10 +39,11 @@ SRCS = $(SRC_DIR)/main.c \
        $(SRC_DIR)/utils.c \
        $(SRC_DIR)/garbage_collector.c \
        $(SRC_DIR)/utils.1.c \
-       $(SRC_DIR)/checker_parce.c \
-       $(SRC_DIR)/check_parce_2.c \
        $(SRC_DIR)/parce_helper.c \
        $(SRC_DIR)/parce_helper_2.c \
+       $(SRC_DIR)/checker_parce.c \
+       $(SRC_DIR)/check_parce_2.c \
+       $(SRC_DIR)/utils_3.c \
 
 # Object Files
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o) $(LIBFT_SRCS:$(SRC_DIR_LIBFT)/%.c=$(OBJ_DIR)/%.o) $(GNL_SRCS:$(SRC_DIR_GNL)/%.c=$(OBJ_DIR)/%.o)
@@ -51,7 +51,7 @@ OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o) $(LIBFT_SRCS:$(SRC_DIR_LIBFT)/%.c=$
 
 # MLX42 Library
 MLX_LIB = $(MLX_DIR)/build/libmlx42.a
-MLX_FLAGS = -L$(MLX_DIR)/build -lmlx42 -ldl -lglfw -pthread -lm
+MLX_FLAGS = -L$(MLX_DIR)/build -lmlx42 -L$(HOME)/.brew/lib -lglfw -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo -lm
 INCLUDES = -I$(MLX_DIR)/include/MLX42 -I$(INC_DIR)
 
 # Dependency Files
@@ -66,15 +66,15 @@ $(NAME): $(OBJS) $(MLX_LIB)
 
 # Compile source files from src/ into object files
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(INCLUDES) -MMD -MP -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDES) -MMD  -c $< -o $@
 
 # Compile source files from src/libft/ into object files
 $(OBJ_DIR)/%.o: $(SRC_DIR_LIBFT)/%.c | $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(INCLUDES) -MMD -MP -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDES) -MMD  -c $< -o $@
 
 # Compile source files from src/get-next-line/ into object files
 $(OBJ_DIR)/%.o: $(SRC_DIR_GNL)/%.c | $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(INCLUDES) -MMD -MP -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDES) -MMD -c $< -o $@
 
 # Create object directory
 $(OBJ_DIR):
@@ -82,7 +82,7 @@ $(OBJ_DIR):
 
 # Build MLX42
 $(MLX_LIB):
-	cd $(MLX_DIR) && cmake -B build && cmake --build build -j4
+	cd $(MLX_DIR) && cmake -B build -DCMAKE_OSX_ARCHITECTURES="x86_64;arm64" && cmake --build build -j4
 
 # Clean object files and dependencies
 clean:

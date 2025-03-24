@@ -1,9 +1,0 @@
-==3679== LEAK SUMMARY:
-==3679==    definitely lost: 66,240 bytes in 7 blocks
-==3679==    indirectly lost: 0 bytes in 0 blocks
-==3679==      possibly lost: 2,400,450 bytes in 2,532 blocks
-==3679==    still reachable: 5,644,752 bytes in 8,803 blocks
-==3679==                       of which reachable via heuristic:
-==3679==                         newarray           : 20,896 bytes in 34 blocks
-==3679==                         multipleinheritance: 18,752 bytes in 1 blocks
-==3679==         suppressed: 0 bytes in 0 blocks

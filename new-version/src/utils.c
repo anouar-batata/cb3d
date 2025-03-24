@@ -1,25 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/24 11:34:37 by bzinedda          #+#    #+#             */
+/*   Updated: 2025/03/24 11:43:48 by bzinedda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cub3d.h"
 
-void ft_error(const char *str)
-{
-	smart_free();
-	printf("Error\n");
-	printf("%s", str);
-	// fprintf(stderr, "%s\n", mlx_strerror(mlx_errno));
-	exit(1);
-}
-
-void load_textures(t_data *data)
+static void	load_north_south(t_data *data)
 {
 	data->no_tex = mlx_load_png(data->config.no_texture);
 	if (!data->no_tex)
 		ft_error("Failed to load north texture");
-	data->so_tex = mlx_load_png(data->config.so_texture); // Free this
+	data->so_tex = mlx_load_png(data->config.so_texture);
 	if (!data->so_tex)
 	{
-		mlx_load_png(data->config.no_texture);
+		mlx_delete_texture(data->no_tex);
 		ft_error("Failed to load south texture");
 	}
+}
+
+static void	load_west_east(t_data *data)
+{
 	data->we_tex = mlx_load_png(data->config.we_texture);
 	if (!data->we_tex)
 	{
@@ -28,7 +35,7 @@ void load_textures(t_data *data)
 		ft_error("Failed to load west texture");
 	}
 	data->ea_tex = mlx_load_png(data->config.ea_texture);
-	if(!data->ea_tex)
+	if (!data->ea_tex)
 	{
 		mlx_delete_texture(data->no_tex);
 		mlx_delete_texture(data->so_tex);
@@ -37,31 +44,20 @@ void load_textures(t_data *data)
 	}
 }
 
-void free_config(t_data *data) {
-	if (data->config.ea_texture) free(data->config.ea_texture);
-	if (data->config.we_texture) free(data->config.we_texture);
-	if (data->config.no_texture) free(data->config.no_texture);
-	if (data->config.so_texture) free(data->config.so_texture);
-	int row;
-
-	row = 0;
-	while (row < data->config.map_height) {
-		if (data->config.map[row]) free(data->config.map[row]);
-		row++;
-	}
+void	load_textures(t_data *data)
+{
+	load_north_south(data);
+	load_west_east(data);
 }
 
-void free_textures(t_data *data)
+void	free_textures(t_data *data)
 {
-	// free_config(data);
-
-	if (data->no_tex) mlx_delete_texture(data->no_tex);
-	if (data->so_tex) mlx_delete_texture(data->so_tex);
-	if (data->we_tex) mlx_delete_texture(data->we_tex);
-	if (data->ea_tex) mlx_delete_texture(data->ea_tex);
-}
-
-double	to_radian(int value)
-{
-	return (value  * M_PI / 180.0);
+	if (data->no_tex)
+		mlx_delete_texture(data->no_tex);
+	if (data->so_tex)
+		mlx_delete_texture(data->so_tex);
+	if (data->we_tex)
+		mlx_delete_texture(data->we_tex);
+	if (data->ea_tex)
+		mlx_delete_texture(data->ea_tex);
 }

@@ -7,11 +7,10 @@
 #include <math.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include <string.h>
 #include "libft.h"
 
 #define WIDTH 1200
-#define HEIGHT 1000
+#define HEIGHT 800
 #define FOV 60
 #define TILE_UNIT 64
 
@@ -107,7 +106,16 @@ typedef struct s_ray
 	int	hit;
 }	t_ray;
 
+typedef struct s_data_tex
+{
+	int y;
+	int	tex_x;
+	int	tex_y;
+}	t_data_tex;
 
+int	check_collision(t_data *data, int map_x, int map_y);
+void	free_config(t_data *data);
+double	to_radian(int value);
 t_node	*ft_lstnew8(void *ptr_to_store);
 void	first_parce(t_vari **var, const char *filename);
 int	parce_helper_2(char *trimmed, t_vari **var, t_config **config);

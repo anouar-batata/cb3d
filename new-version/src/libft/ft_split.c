@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/24 10:37:51 by bzinedda          #+#    #+#             */
+/*   Updated: 2025/03/24 12:00:18 by bzinedda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cub3d.h"
 
 static	int	count_words(char const *s, char c)
@@ -37,16 +49,16 @@ static	void	fill_word(char *currentWord, char const *s,
 }
 
 static	char	**allocate_strings(char const *s, char delimeter,
-									size_t nbr_of_words, char **splited_strings)
+									size_t nbw, char **splited_strings)
 {
 	size_t	s_index;
-	size_t	current_word_index;
+	size_t	cure_i;
 	size_t	word_size;
 
-	current_word_index = 0;
+	cure_i = 0;
 	word_size = 0;
 	s_index = 0;
-	while (current_word_index < nbr_of_words)
+	while (cure_i < nbw)
 	{
 		while (s[s_index] && s[s_index] == delimeter)
 			s_index++;
@@ -55,24 +67,24 @@ static	char	**allocate_strings(char const *s, char delimeter,
 			word_size++;
 			s_index++;
 		}
-		splited_strings[current_word_index] = (char *)smart_malloc(word_size + 1);
-		fill_word(splited_strings[current_word_index], s, s_index, word_size);
+		splited_strings[cure_i] = (char *)smart_malloc(word_size + 1);
+		fill_word(splited_strings[cure_i], s, s_index, word_size);
 		word_size = 0;
-		current_word_index++;
+		cure_i++;
 	}
-	splited_strings[current_word_index] = NULL;
+	splited_strings[cure_i] = NULL;
 	return (splited_strings);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**splited_strings;
-	size_t	nbr_of_words;
+	size_t	nbw;
 
 	if (!s)
 		return (NULL);
-	nbr_of_words = count_words(s, c);
-	splited_strings = (char **)smart_malloc(sizeof(char *) * (nbr_of_words + 1));
-	splited_strings = allocate_strings(s, c, nbr_of_words, splited_strings);
+	nbw = count_words(s, c);
+	splited_strings = (char **)smart_malloc(sizeof(char *) * (nbw + 1));
+	splited_strings = allocate_strings(s, c, nbw, splited_strings);
 	return (splited_strings);
 }

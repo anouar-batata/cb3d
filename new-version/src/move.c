@@ -1,20 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   move.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/24 10:35:07 by bzinedda          #+#    #+#             */
+/*   Updated: 2025/03/24 11:55:23 by bzinedda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cub3d.h"
 
-static  int check_collision(t_data *data, int map_x, int map_y)
+void	move_forward(t_data *data, double move_speed)
 {
-    if (map_x >= 0 && map_x < data->config.map_width && 
-		map_y >= 0 && map_y < data->config.map_height &&
-		data->config.map[map_y][map_x] != '1')
-            return (0);
-    return (1);
-}
+	double	new_x;
+	double	new_y;
+	int		map_x;
+	int		map_y;
 
-void    move_forward(t_data *data, double move_speed)
-{
-	double new_x = data->player.x + cos(data->player.angle) * move_speed;
-	double new_y = data->player.y + sin(data->player.angle) * move_speed;
-	int map_x = (int)(new_x / TILE_UNIT);
-	int map_y = (int)(new_y / TILE_UNIT);
+	new_x = data->player.x + cos(data->player.angle) * move_speed;
+	new_y = data->player.y + sin(data->player.angle) * move_speed;
+	map_x = (int)(new_x / TILE_UNIT);
+	map_y = (int)(new_y / TILE_UNIT);
 	if (!check_collision(data, map_x, map_y))
 	{
 		data->player.x = new_x;
@@ -22,12 +30,17 @@ void    move_forward(t_data *data, double move_speed)
 	}
 }
 
-void    move_right(t_data *data, double move_speed)
+void	move_right(t_data *data, double move_speed)
 {
-	double new_x = data->player.x + cos(data->player.angle + M_PI / 2) * move_speed;
-	double new_y = data->player.y + sin(data->player.angle + M_PI / 2) * move_speed;
-	int map_x = (int)(new_x / TILE_UNIT);
-	int map_y = (int)(new_y / TILE_UNIT);
+	double	new_x;
+	double	new_y;
+	int		map_x;
+	int		map_y;
+
+	new_x = data->player.x + cos(data->player.angle + M_PI / 2) * move_speed;
+	new_y = data->player.y + sin(data->player.angle + M_PI / 2) * move_speed;
+	map_x = (int)(new_x / TILE_UNIT);
+	map_y = (int)(new_y / TILE_UNIT);
 	if (!check_collision(data, map_x, map_y))
 	{
 		data->player.x = new_x;
@@ -35,12 +48,17 @@ void    move_right(t_data *data, double move_speed)
 	}
 }
 
-void    move_left(t_data *data, double move_speed)
+void	move_left(t_data *data, double move_speed)
 {
-	double new_x = data->player.x + cos(data->player.angle - M_PI / 2) * move_speed;
-	double new_y = data->player.y + sin(data->player.angle - M_PI / 2) * move_speed;
-	int map_x = (int)(new_x / TILE_UNIT);
-	int map_y = (int)(new_y / TILE_UNIT);
+	double	new_x;
+	double	new_y;
+	int		map_x;
+	int		map_y;
+
+	new_x = data->player.x + cos(data->player.angle - M_PI / 2) * move_speed;
+	new_y = data->player.y + sin(data->player.angle - M_PI / 2) * move_speed;
+	map_x = (int)(new_x / TILE_UNIT);
+	map_y = (int)(new_y / TILE_UNIT);
 	if (!check_collision(data, map_x, map_y))
 	{
 		data->player.x = new_x;
@@ -48,26 +66,20 @@ void    move_left(t_data *data, double move_speed)
 	}
 }
 
-void    move_backward(t_data *data, double move_speed)
+void	move_backward(t_data *data, double move_speed)
 {
-	double new_x = data->player.x - cos(data->player.angle) * move_speed;
-	double new_y = data->player.y - sin(data->player.angle) * move_speed;
-	int map_x = (int)(new_x / TILE_UNIT);
-	int map_y = (int)(new_y / TILE_UNIT);
+	double	new_x;
+	double	new_y;
+	int		map_x;
+	int		map_y;
+
+	new_x = data->player.x - cos(data->player.angle) * move_speed;
+	new_y = data->player.y - sin(data->player.angle) * move_speed;
+	map_x = (int)(new_x / TILE_UNIT);
+	map_y = (int)(new_y / TILE_UNIT);
 	if (!check_collision(data, map_x, map_y))
-    {
+	{
 		data->player.x = new_x;
 		data->player.y = new_y;
 	}
-}
-
-
-void    turn_right(t_data *data, double rot_speed)
-{
-	data->player.angle += rot_speed;
-}
-
-void    turn_left(t_data *data, double rot_speed)
-{
-	data->player.angle -= rot_speed;
 }

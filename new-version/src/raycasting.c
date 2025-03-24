@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   raycasting.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/24 10:34:11 by bzinedda          #+#    #+#             */
+/*   Updated: 2025/03/24 11:26:57 by bzinedda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cub3d.h"
 
 static void	init_ray(t_ray *ray, t_ray_step *step)
@@ -31,11 +43,13 @@ static void	set_side_dist(t_data *data, t_ray *ray, t_ray_step *step)
 	map_x = (int)(data->player.x / TILE_UNIT);
 	map_y = (int)(data->player.y / TILE_UNIT);
 	if (ray->dx > 0)
-		step->side_dist_x = ((map_x + 1) * TILE_UNIT - data->player.x) / ray->dx;
+		step->side_dist_x = ((map_x + 1) * TILE_UNIT - data->player.x)
+			/ ray->dx;
 	else
 		step->side_dist_x = (data->player.x - map_x * TILE_UNIT) / -ray->dx;
 	if (ray->dy > 0)
-		step->side_dist_y = ((map_y + 1) * TILE_UNIT - data->player.y) / ray->dy;
+		step->side_dist_y = ((map_y + 1) * TILE_UNIT - data->player.y)
+			/ ray->dy;
 	else
 		step->side_dist_y = (data->player.y - map_y * TILE_UNIT) / -ray->dy;
 }
@@ -92,11 +106,8 @@ static void	calc_dist(t_data *data, t_ray *ray, t_ray_step *step)
 		ray->dist *= cos(ray->angle - data->player.angle);
 	}
 	else
-	{
-		ray->dist = data->config.height;
-		ray->side = -1;
-		ray->wall_x = 0;
-	}
+		(1 && ((ray->dist = data->config.height),
+				(ray->side = -1), (ray->wall_x = 0)));
 }
 
 double	cast_ray(t_data *data, t_ray *ray)

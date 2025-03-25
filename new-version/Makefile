@@ -2,7 +2,7 @@ NAME = cub3D
 
 # Compiler and Flags
 CC = cc
-CFLAGS = -Wall -Wextra -Werror# -fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror
 # Directories
 SRC_DIR = src
 SRC_DIR_LIBFT = src/libft

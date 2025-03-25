@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alouriga <alouriga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 10:34:00 by bzinedda          #+#    #+#             */
-/*   Updated: 2025/03/24 23:30:41 by alouriga         ###   ########.fr       */
+/*   Updated: 2025/03/25 01:28:59 by bzinedda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,13 @@ static void	projection_3d(t_data *data, double fov, double ray_angle_increment)
 	int		x;
 	t_ray	ray;
 	double	wall_height;
+	double	start_angle;
 
 	x = 0;
+	start_angle = data->player.angle - (fov / 2);
 	while (x < data->config.width)
 	{
-		ray.angle = data->player.angle - (fov / 2) + (x * ray_angle_increment);
+		ray.angle = start_angle + (x * ray_angle_increment);
 		ray.dist = cast_ray(data, &ray);
 		if (ray.side != -1)
 		{

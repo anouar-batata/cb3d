@@ -6,7 +6,7 @@
 /*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 10:34:11 by bzinedda          #+#    #+#             */
-/*   Updated: 2025/03/24 11:26:57 by bzinedda         ###   ########.fr       */
+/*   Updated: 2025/03/25 01:39:10 by bzinedda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	init_ray(t_ray *ray, t_ray_step *step)
 {
 	ray->dx = cos(ray->angle);
-	ray->dy = sin(ray->angle);
+	ray->dy = sin(ray->angle) + 1e-10;
 	ray->hit = 0;
 	if (ray->dx > 0)
 		step->step_x = 1;
@@ -29,7 +29,7 @@ static void	init_ray(t_ray *ray, t_ray_step *step)
 		ray->delta_dist_x = 1e30;
 	else
 		ray->delta_dist_x = fabs(TILE_UNIT / ray->dx);
-	if (ray->dy == 0)
+	if (ray->dx == 0)
 		ray->delta_dist_y = 1e30;
 	else
 		ray->delta_dist_y = fabs(TILE_UNIT / ray->dy);
@@ -42,6 +42,8 @@ static void	set_side_dist(t_data *data, t_ray *ray, t_ray_step *step)
 
 	map_x = (int)(data->player.x / TILE_UNIT);
 	map_y = (int)(data->player.y / TILE_UNIT);
+	step->side_dist_x = 0;
+	step->side_dist_y = 0;
 	if (ray->dx > 0)
 		step->side_dist_x = ((map_x + 1) * TILE_UNIT - data->player.x)
 			/ ray->dx;

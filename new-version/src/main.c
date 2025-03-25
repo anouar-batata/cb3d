@@ -3,23 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alouriga <alouriga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 10:34:58 by bzinedda          #+#    #+#             */
-/*   Updated: 2025/03/24 22:15:17 by alouriga         ###   ########.fr       */
+/*   Updated: 2025/03/25 01:41:25 by bzinedda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	f(void)
-{
-	system("lsof -c cub3D; leaks cub3D | grep leaks");
-}
-
 int	main(int argc, char **argv)
 {
-	atexit(f);
 	t_data	data;
 
 	if (argc != 2)

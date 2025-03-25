@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alouriga <alouriga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 23:31:54 by alouriga          #+#    #+#             */
-/*   Updated: 2025/03/24 23:36:15 by alouriga         ###   ########.fr       */
+/*   Updated: 2025/03/25 01:42:15 by bzinedda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,8 +157,8 @@ int			len_cal(t_list *list);
 char		**list_to_array(t_list *list);
 int			ft_strcmp(const char *s1, const char *s2);
 void		ft_error_2(const char *str, int fd);
-void		*ft_smart_malloc(size_t size);
-void		ft_smart_free(void *ptr);
+void		*smart_malloc(size_t size);
+void		smart_free(void);
 t_list		*ft_lstnew(char *content);
 void		ft_lstadd_back(t_list **lst, t_list *new);
 void		parse_cub_file(const char *filename, t_data *data,

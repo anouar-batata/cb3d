@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alouriga <alouriga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bzinedda <bzinedda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 10:34:34 by bzinedda          #+#    #+#             */
-/*   Updated: 2025/03/24 23:31:06 by alouriga         ###   ########.fr       */
+/*   Updated: 2025/03/25 01:39:48 by bzinedda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ void	draw_ceil_and_floor(t_data *data)
 
 void	get_color(t_data_tex *var, mlx_texture_t *texture)
 {
-	var->color = ((uint32_t *)texture->pixels)
-	[var->tex_y * texture->width + var->tex_x];
+	var->color = ((uint32_t *)texture->pixels)[var->tex_y
+		* texture->width + var->tex_x];
 	var->bytes = (uint8_t *)&var->color;
 	var->corrected_color = (var->bytes[0] << 24) | (var->bytes[1] << 16)
 		| (var->bytes[2] << 8) | var->bytes[3];
